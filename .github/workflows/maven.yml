@@ -21,7 +21,7 @@ jobs:
       run: mvn -B package --file pom.xml
 
   snyk:                                          # <-- add from here
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
